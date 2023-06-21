@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@3"></script>
+     <!-- <script src="https://cnd.tailwindcss.com"></script> -->
+    <title>Warehouse Management - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    </head>
+  <body>
+    <div class="login-container">
+        <h1 class="hed">Warehouse Management</h1>
+        <form class="login-form" @submit.prevent="login">
+          <label for="username">Username:</label>
+          <input id="username" v-model="username" type="text" required>
+          <label for="password">Password:</label>
+          <input id="password" v-model="password" type="password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <script>
+        let app= {
+          data() {
+            return {
+              username: '',
+              password: ''
+            };
+          },
+          methods: {
+            login() {
+              // You can implement your login logic here
+              // For example, send a POST request to your server to authenticate the user
+            },
+          },
+        } 
+        Vue.createApp(app).mount('#app');
+        </script>
+  </body>
+</html>
+
+
+
+
+
+<!-- <script>
+    export default {
+      data() {
+        return {
+          username: '',
+          password: ''
+        };
+      },
+      methods: {
+        login() {
+          // You can implement your login logic here
+          // For example, send a POST request to your server to authenticate the user
+        }
+      }
+    };
+    </script>
+    
+    <style scoped>
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      max-width: 400px;
+      width: 100%;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    </style> -->
